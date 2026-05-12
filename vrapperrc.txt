@@ -1,0 +1,36 @@
+" insertモードを抜けた時にIME解除
+set imd
+
+" 検索時の大文字小文字無視
+set ignorecase
+
+"<CR> means carriage return
+nnoremap <S-j> 5j
+nnoremap <S-k> 5k
+vnoremap <S-j> 5j
+vnoremap <S-k> 5k
+nnoremap <S-r> :source ~/.vrapperrc<CR>
+
+noremap <C-h> 3<C-e>
+noremap <C-y> 3<C-y>
+
+map <S-Space> <Esc> 
+
+
+
+set smartcase
+set ignorecase 
+
+set incsearch
+set hlsearch
+
+
+" centering after search
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+
+vnoremap <C-p> "0p
+nnoremap <C-p> viw"0p
+
