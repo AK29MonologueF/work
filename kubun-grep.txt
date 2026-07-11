@@ -17,3 +17,13 @@ function! KubunSearchVisual()
 endfunction
 
 xnoremap <leader>k :<C-u>call KubunSearchVisual()<CR>
+
+" :Rgk 123 引数を渡して検索
+" こうなる rg --column --line-number --no-heading --color=always '123' ~/master/kubun.txt
+command! -nargs=+ Rgk call fzf#vim#grep(
+      \ 'rg --column --line-number --no-heading --color=always '
+      \ . shellescape(<q-args>)
+      \ . ' ~/master/kubun.txt',
+      \ 1,
+      \ fzf#vim#with_preview(),
+      \ 0)
